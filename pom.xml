@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>amp-service-ear</groupId>
+  <artifactId>amp.service.ear</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>ear</packaging>
+  <name>amp-service-ear</name>
+  <description>amp-service-ear</description>
+  
+  <parent>
+  	<groupId>amp.framework</groupId>
+  	<artifactId>amp-framework</artifactId>
+  	<version>1.0-SNAPSHOT</version>
+  </parent>
+  
+  <build>
+    <finalName>amp-service-ear</finalName>
+    <plugins>
+      <plugin>
+        <artifactId>maven-ear-plugin</artifactId>
+        <version>2.10</version>
+        <configuration>
+        
+          <earSourceDirectory>EarContent</earSourceDirectory>
+          <version>6</version>
+          <defaultLibBundleDir>lib</defaultLibBundleDir>
+        
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+      	    
+          <modules>
+            <webModule>
+             <groupId>amp.storage.api</groupId>
+      			 <artifactId>amp-storage-api</artifactId>
+      			 <uri>amp-storage-api.war</uri>
+             <bundleFileName>amp-storage-api.war</bundleFileName>
+            </webModule>
+            
+          </modules>
+           
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  	
+  <dependencies>
+  	
+      
+       <dependency>
+        <groupId>amp.storage.api</groupId>
+    		<artifactId>amp-storage-api</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    		<type>war</type>
+       </dependency>
+     
+        
+  </dependencies>
+</project>

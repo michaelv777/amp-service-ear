@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <description>amp-service-ear</description>
+  <display-name>amp.service.ear</display-name>
+  <module>
+    <web>
+      <web-uri>amp-storage-api.war</web-uri>
+      <context-root>/amp-storage-api</context-root>
+    </web>
+  </module>
+  <library-directory>lib</library-directory>
+</application>
